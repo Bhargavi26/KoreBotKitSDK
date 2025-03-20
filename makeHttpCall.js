@@ -27,7 +27,20 @@ async function makeHttpCall(method, url, data = null, headers = {}) {
   }
 }
 
+async function makeHttpCallGet(url, headers = {}) {
+  try {
+    const response = await axios.get(
+      url,
+      {headers
+    });
+
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
 
 module.exports = {
-    makeHttpCall
+    makeHttpCall,
+    makeHttpCallGet
 }

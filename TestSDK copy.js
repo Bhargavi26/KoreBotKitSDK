@@ -19,17 +19,17 @@ module.exports = {
         if(data.message == 'I am closing our current conversation as I have not received any input from you. We can start over when you need.' && generateTranscript == 'true'){
             console.log("Timeout")
         }
-        else{
-            console.log("No Timeout")
+        // else{
+        //     console.log("No Timeout")
             
 
-            sdk.getMessages(data, function(err, resp){
-                        if(err){
-                            console.log(JSON.stringify(err))
-                        }else{
-                            console.log(JSON.stringify(resp.messages))
-                        }
-                    });
+            // sdk.getMessages(data, function(err, resp){
+            //             if(err){
+            //                 console.log(JSON.stringify(err))
+            //             }else{
+            //                 console.log(JSON.stringify(resp.messages))
+            //             }
+            //         });
 // let url= 'https://platform.kore.ai/api/botsdk/stream/st-222adef3-0f3c-5e25-bda2-96bc1549fb23/getMessages?skip=0&limit=20&userId=u-8affce58-a87c-5a60-9074-c7567dda169d'
 // axios.get(url, {
 //     headers: {
@@ -45,7 +45,7 @@ module.exports = {
 //   });
 
 
-        }
+        // }
     },
     on_webhook      : async function(requestId, data, componentName, callback) 
     {
