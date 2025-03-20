@@ -11,6 +11,7 @@ sdk.checkNodeVersion();
 server.start();
 
 sdk.registerBot(require('./FindAFlight.js'));
+sdk.registerBot(require('./TestSDK.js'));
 sdk.registerBot(require('./SimpleConversationalBot.js'));
 sdk.registerBot(require('./SimpleConversationalBotWithMultipleBotId.js'));
 sdk.registerBot(require('./GuessTheNumber.js'));
